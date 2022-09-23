@@ -245,7 +245,7 @@ parser.add_argument("--region", default="D")
 #parser.add_argument("--ntuple_path", default="/nfs/dust/cms/user/mkomm/HNL/ntuples/24May20")
 #parser.add_argument("--output_path", default="/nfs/dust/cms/user/mkomm/HNL/histo/limits/hists")
 
-parser.add_argument("--ntuple_path", default="/vols/cms/hsfar/nanoAOD_friends/preapproval")
+parser.add_argument("--ntuple_path", default="/vols/cms/hsfar/nanoAOD_friends/21Sep20")
 parser.add_argument("--output_path", default="/vols/cms/hsfar/hists")
 
 parser.add_argument("--data", action="store_true", default=False)
@@ -294,14 +294,14 @@ systematics_rates["scale_shapeonly"] = "scale"
 systematics_rates["looseMuons_weight_id"] = "loose_muon_id"
 systematics_rates["looseElectrons_weight_id"] = "loose_electron_id"
 systematics_rates["lepton2_track"] = "resolvedLepton_track_reco"
-
+systematics_rates["looseMuons_weight_reco"] = "loose_muon_reco" 
 systematics_shapes = ["nominal", "jesTotal", "jer", "unclEn"]
 ####################################
 if len(args.couplings)==0:
     # couplings to consider
     #couplings = range(1, 68)
     #couplings = [ 1]#, 2, 7, 12, 47, 52]
-    couplings = [2,7,12]
+    couplings = [1,2,7,12,47,52,67]
     #couplings = [12]
     print ("Using default couplings: "+str(couplings))
 else:
