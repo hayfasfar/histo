@@ -2,17 +2,17 @@ n_lines=$(wc -l < ../config/procs.txt)
 years=(2016 2017 2018)
 #years=(2018)
 echo "number of lines" $n_lines
-mkdir -p hists_merged
+mkdir -p /vols/cms/hsfar/hists_merged_taus
 
 for ((i=1;i<=n_lines;i++)); do
     proc=$(awk "NR == $i" ../config/procs.txt)
     echo $i, $proc
     for year in "${years[@]}"; do
         echo $year
-        files=(hists/${proc}*_${year}.root)
+        files=(/vols/cms/hsfar/hists/${proc}*_${year}.root)
         if [ -e "${files[0]}" ]; then
             #rm hists_merged/${proc}_${year}.root
-            hadd -f hists_merged/${proc}_${year}.root hists/${proc}*_${year}.root
+            hadd -f /vols/cms/hsfar/hists_merged_taus/${proc}_${year}.root /vols/cms/hsfar/hists_taus/${proc}*_${year}.root
         else
             echo "skip"
         fi
@@ -20,7 +20,8 @@ for ((i=1;i<=n_lines;i++)); do
 done
 
 for year in "${years[@]}"; do
-    #rm hists_merged2/${year}.root
-    hadd -f hists_merged/${year}.root hists_merged/*_${year}.root
+    rm hists_merged_taus/${year}.root
+    hadd -f /vols/cms/hsfar/hists_merged_taus/${year}.root /vols/cms/hsfar/hists_merged_taus/*_${year}.root
+
 done
 
