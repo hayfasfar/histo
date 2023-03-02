@@ -49,7 +49,8 @@ def remove_neg_entries(hist: ROOT.TH1D):
     for ibin in range(hist.GetNbinsX()):
         c = hist.GetBinContent(ibin+1)
         if c<10**-4:
-            hist.SetBinContent(ibin+1,10**-3)
+            hist.SetBinContent(ibin+1,10**-4)
+            hist.SetBinError(ibin+1,10**-5)
             #note: in case of 0 entries the uncertainty is also small
             #(this is not the case with negative events)
             if hist.GetBinError(ibin+1)<10**-4 and avgWeight>0:
@@ -245,8 +246,8 @@ parser.add_argument("--region", default="D")
 #parser.add_argument("--ntuple_path", default="/nfs/dust/cms/user/mkomm/HNL/ntuples/24May20")
 #parser.add_argument("--output_path", default="/nfs/dust/cms/user/mkomm/HNL/histo/limits/hists")
 
-parser.add_argument("--ntuple_path", default="/vols/cms/hsfar/nanoAOD_friends/21Sep20")
-parser.add_argument("--output_path", default="/vols/cms/hsfar/hists")
+parser.add_argument("--ntuple_path", default="/vols/cms/hsfar/nanoAOD_friends/19Jan23")
+parser.add_argument("--output_path", default="/vols/cms/hsfar/hists_03Feb23")
 
 parser.add_argument("--data", action="store_true", default=False)
 parser.add_argument("--test", action="store_true", dest="oneFile", default=False)
@@ -295,14 +296,15 @@ systematics_rates["looseMuons_weight_id"] = "loose_muon_id"
 systematics_rates["looseElectrons_weight_id"] = "loose_electron_id"
 systematics_rates["lepton2_track"] = "resolvedLepton_track_reco"
 systematics_rates["looseMuons_weight_reco"] = "loose_muon_reco" 
+systematics_rates["looseElectrons_weight_reco"] = "loose_electron_reco"
 systematics_shapes = ["nominal", "jesTotal", "jer", "unclEn"]
 ####################################
 if len(args.couplings)==0:
     # couplings to consider
     #couplings = range(1, 68)
     #couplings = [ 1]#, 2, 7, 12, 47, 52]
-    couplings = [1,2,7,12,47,52,67]
-    #couplings = [12]
+    #couplings = [1,2,7,12,47,52,67]
+    couplings = [1,47,52,67]
     print ("Using default couplings: "+str(couplings))
 else:
     couplings = list(set(args.couplings)) #remove duplications
