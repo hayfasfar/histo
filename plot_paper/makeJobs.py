@@ -1,4 +1,4 @@
-outputPath = "/vols/cms/mkomm/HNL/histo/plot_paper/hists"
+outputPath = "/vols/cms/mkomm/HNL/histo/plot_paper/hists_met_jlFrac"
 
 exportVars = {}
 exportVars['OUTPATH'] = outputPath

@@ -6,6 +6,7 @@ import os
 import random
 import csv
 import json
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--year",type=int,default=2016, choices=[2016,2017,2018])
@@ -69,6 +70,12 @@ def dRVar(syst="nominal"):
         return syst+"_dR_l2j"
     else:
         return "nominal_dR_l2j"
+        
+def jlFracVar(syst='nominal'):
+    if syst in ['jerUp', 'jerDown', 'jesTotalUp', 'jesTotalDown']:
+        return "(hnlJet_"+syst+"_ptorig/subleadingLeptons_pt[0])"
+    else:
+        return "(hnlJet_nominal_ptorig/subleadingLeptons_pt[0])"
 
 def weight(syst="nominal"):
     return "(MET_filter > 0)*((nleadingLeptons+nsubleadingLeptons)==2)*({njets}>0)".format(njets=njetsVar(syst))
@@ -110,13 +117,23 @@ def mcWeight(sample, syst="nominal"):
             weight +="+IsoMuTrigger_flag*leadingLeptons_isMuon[0]*(IsoMuTrigger_weight_trigger_nominal*tightMuons_weight_id_nominal*tightMuons_weight_iso_nominal)"
         weight+=")"
 
-    if syst=="trackUp":
-        weight+="*hnlJet_track_weight_adapted_up"
-    elif syst=="trackDown":
-        weight+="*hnlJet_track_weight_adapted_down"
+
+    if sample=='nonisoqcd':
+        if syst=="trackUp":
+            weight+="*hnlJet_track_weight_adapted_up"
+        elif syst=="trackDown":
+            weight+="*hnlJet_track_weight_adapted_down"
+        else:
+            weight+="*hnlJet_track_weight_adapted_nominal"
+            
     else:
-        weight+="*hnlJet_track_weight_adapted_nominal"
-        
+        if syst=="trackUp":
+            weight+="*hnlJet_track_weight_up"
+        elif syst=="trackDown":
+            weight+="*hnlJet_track_weight_down"
+        else:
+            weight+="*hnlJet_track_weight_nominal"
+            
     return weight
 
 
@@ -147,6 +164,9 @@ def normWeightSignal(sample,coupling=1,scale=1):
 
 def makeHist(path,treeName,var,weight,binning,syst="nominal"):
     f = ROOT.TFile(path)
+    if not f:
+        print ("WARNING: file '%s' is not valid"%path)
+        return None
     tree = f.Get(treeName)
     #print (tree)
     if not tree:
@@ -199,7 +219,7 @@ def makeHistFromFolder(folder,treeName,var,weight,binning):
 plotCfgs ={
     "tagger_CR_boosted":{
         "var": taggerScore(args.syst),
-        "cut": "({dR}<0.4)*({mll}>80.)*({njets}>0)*({nfwdjets}<1)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst)) ,
+        "cut": "({dR}<0.4)*({mll}>80.)*({njets}>0)*({njets}<5)*({met}<60.)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst),met=metVar(args.syst),jlFrac=jlFracVar(args.syst)) ,
         "binning": np.linspace(0,1,101),
         "signals": {
             #"HNL_dirac_pt20_ctau1p0e00_massHNL10p0_Vall1p664e-03": {
@@ -211,7 +231,7 @@ plotCfgs ={
     
     "tagger_CR_resolved":{
         "var": taggerScore(args.syst),
-        "cut": "({dR}>0.4)*({mll}>80.)*({njets}>0)*({nfwdjets}<1)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst)) ,
+        "cut": "({dR}>0.4)*({dR}<1.3)*({mll}>80.)*({njets}>0)*({njets}<5)*({met}<60.)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst),met=metVar(args.syst),jlFrac=jlFracVar(args.syst)) ,
         "binning": np.linspace(0,1,101),
         "signals": {
             #"HNL_dirac_pt20_ctau1p0e00_massHNL10p0_Vall1p664e-03": {
@@ -223,7 +243,7 @@ plotCfgs ={
     
     "tagger_SR_boosted":{
         "var": taggerScore(args.syst),
-        "cut": "({dR}<0.4)*({mll}>20.)*({mll}<80.)*({njets}>0)*({njets}<5)*({nfwdjets}<1)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),met=metVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst)) ,
+        "cut": "({dR}<0.4)*({mll}>20.)*({mll}<80.)*({njets}>0)*({njets}<5)*({met}<60.)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),met=metVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst),jlFrac=jlFracVar(args.syst)) ,
         "binning": np.linspace(0,1,101),
         "signals": {
             "HNL_dirac_pt20_ctau1p0e02_massHNL4p5_Vall1p438e-03": {
@@ -244,7 +264,7 @@ plotCfgs ={
     
     "tagger_SR_resolved":{
         "var": taggerScore(args.syst),
-        "cut": "({dR}>0.4)*({mll}>20.)*({mll}<80.)*({njets}>0)*({njets}<5)*({nfwdjets}<1)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),met=metVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst)) ,
+        "cut": "({dR}>0.4)*({dR}<1.3)*({mll}>20.)*({mll}<80.)*({njets}>0)*({njets}<5)*({met}<60.)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),met=metVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst),jlFrac=jlFracVar(args.syst)) ,
         "binning": np.linspace(0,1,101),
         "signals": {
             "HNL_dirac_pt20_ctau1p0e02_massHNL4p5_Vall1p438e-03": {
@@ -287,7 +307,7 @@ plotCfgs ={
     
     "mllj_SR":{
         "var": mlljVar(args.syst),
-        "cut": "({mll}>20.)*({mll}<80.)*({njets}>0)*({njets}<5)*({nfwdjets}<1)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),met=metVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst)) ,
+        "cut": "({mll}>20.)*({mll}<80.)*({njets}>0)*({njets}<5)*({met}<60.)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),met=metVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst),jlFrac=jlFracVar(args.syst)) ,
         "binning": np.linspace(0,300,301),
         "signals": {
             "HNL_dirac_pt20_ctau1p0e02_massHNL4p5_Vall1p438e-03": {
@@ -308,7 +328,7 @@ plotCfgs ={
     
     "dR_SR":{
         "var": dRVar(args.syst),
-        "cut": "({mll}>20.)*({mll}<80.)*({njets}>0)*({njets}<5)*({nfwdjets}<1)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),met=metVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst)) ,
+        "cut": "({mll}>20.)*({mll}<80.)*({njets}>0)*({njets}<5)*({met}<60.)".format(dR=dRVar(args.syst),mll=mllVar(args.syst),met=metVar(args.syst),njets=njetsVar(args.syst),nfwdjets=nfwdjetsVar(args.syst),jlFrac=jlFracVar(args.syst)) ,
         "binning": np.linspace(0,1.3,131),
         "signals": {
             "HNL_dirac_pt20_ctau1p0e02_massHNL4p5_Vall1p438e-03": {
@@ -329,6 +349,12 @@ plotCfgs ={
 
 }
 
+outputFileName = args.output+"_"+str(args.year)+"_"+args.plot+"_"+str(args.syst)+".root"
+
+if os.path.exists(outputFileName):
+    print ("Output exists: "+outputFileName)
+    sys.exit(0)
+
 plotCfg = plotCfgs[args.plot]
 
 samples = yaml.load(open("/vols/cms/mkomm/HNL/histo/config/samples.yml"))
@@ -341,7 +367,7 @@ if not plotCfg['blind'] and args.syst=="nominal":
         for run in samples[sampleName][args.year].keys():
             
             for folder in samples[sampleName][args.year][run]:
-                path = "/vols/cms/vc1117/LLP/nanoAOD_friends/HNL/26Aug21/"+str(args.year)+"/"+folder
+                path = "/vols/cms/hsfar/nanoAOD_friends/preapproval/"+str(args.year)+"/"+folder
                 weight = dataWeight(sampleName)+"*"+plotCfg['cut']
                 hist = makeHistFromFolder(path,"Friends",plotCfg['var'],weight,plotCfg['binning'])
                 if histSum == None:
@@ -354,7 +380,7 @@ for sampleName in ['qcd','topbkg','wjets','dyjets','vgamma']:
     histSum = None
     for proc in samples[sampleName][args.year].keys():
         for folder in samples[sampleName][args.year][proc]:
-            path = "/vols/cms/vc1117/LLP/nanoAOD_friends/HNL/26Aug21/"+str(args.year)+"/"+folder
+            path = "/vols/cms/hsfar/nanoAOD_friends/preapproval/"+str(args.year)+"/"+folder
             weight = normWeight(folder)+"*"+mcWeight(sampleName,args.syst)+"*"+plotCfg['cut']
             hist = makeHistFromFolder(path,"Friends",plotCfg['var'],weight,plotCfg['binning'])
             if histSum == None:
@@ -383,7 +409,7 @@ for sampleName in ['qcd']:
 
 for sampleName in plotCfg['signals']:
     folder = sampleName+"-"+str(args.year)
-    path = "/vols/cms/vc1117/LLP/nanoAOD_friends/HNL/26Aug21/"+str(args.year)+"/"+folder
+    path = "/vols/cms/hsfar/nanoAOD_friends/preapproval/"+str(args.year)+"/"+folder
     for scenarioName,coupling in plotCfg['signals'][sampleName].items():
         weight = normWeightSignal(sampleName,coupling=coupling)+"*"+mcWeight(sampleName,args.syst)+"*"+plotCfg['cut']
         hist = makeHistFromFolder(path,"Friends",plotCfg['var'],weight,plotCfg['binning'])
@@ -391,7 +417,7 @@ for sampleName in plotCfg['signals']:
 
 
 print ("="*60)
-outputFileName = args.output+"_"+str(args.year)+"_"+args.plot+"_"+str(args.syst)+".root"
+
 print ("write output: %s"%outputFileName)
 outputFile = ROOT.TFile(outputFileName,"RECREATE")
 for name,hist in histDict.items():
