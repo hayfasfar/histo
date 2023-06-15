@@ -42,6 +42,8 @@ class Sample:
                 self.yieldsHNL.update(json.load(json_file))  
             with open("/nfs/dust/cms/user/mkomm/HNL/LLP/filterTable.json") as json_file:
                 gen_filter = json.load(json_file)
+            with open("/nfs/dust/cms/user/mkomm/HNL/LLP/filterLPairTable.json") as json_file:
+                gen_filter.update(json.load(json_file))
                 
             with open("/nfs/dust/cms/user/mkomm/HNL/LLP/gridpackLookupTable.json") as lookup_table_file:
                 lookup_table = json.load(lookup_table_file)

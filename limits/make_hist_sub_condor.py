@@ -19,17 +19,17 @@ nregions = len(regions)
 procsbkg = []
 procsHNL = []
 procsData = []
-years = ["2016", "2017", "2018"]
+years = ["2016"]#, "2017", "2018"]
 
 import yaml
 with open("../config/samples.yml") as samples_file:
     samples_dict = yaml.load(samples_file, Loader=yaml.FullLoader)
 
 for l in samples_dict:
-    if "HNL" in l:
+    if ("HNL" in l) and ("ntau" in l):
         procsHNL.append(l)
-    elif l == "muon" or l == "electron": 
-        procsData.append(l)
+    #elif l == "muon" or l == "electron": 
+    #    procsData.append(l)
     else:
         continue
         procsbkg.append(l)
@@ -45,7 +45,7 @@ Log          = /dev/null
 
 Request_CPUs   = 1
 Request_Memory = 2.5GB
-+RequestRuntime = 9000
++RequestRuntime = 10440
 Should_Transfer_Files = NO
 
 Requirements = ( OpSysAndVer == "CentOS7" )
