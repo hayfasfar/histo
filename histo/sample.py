@@ -19,9 +19,14 @@ class Sample:
             with open(os.path.join("/vols/cms/LLP/yields_201117", year, "eventyields.json")) as json_file:
                 yields = json.load(json_file)
             with open(os.path.join("/vols/cms/LLP/yields_201117", year, "eventyieldsHNL.json")) as json_file:
-                yieldsHNL = json.load(json_file)        
+                self.yieldsHNL = json.load(json_file)        
+            with open(os.path.join("/vols/cms/LLP/yields_230309", year, "eventyieldsHNL.json")) as json_file:
+                self.yieldsHNL.update(json.load(json_file))
+
             with open("/vols/cms/LLP/filterTable.json") as json_file:
                 gen_filter = json.load(json_file)
+            with open("/vols/cms/LLP/filterLPairTable.json") as json_file:
+                gen_filter.update(json.load(json_file))
                 
             with open("/vols/cms/LLP/gridpackLookupTable.json") as lookup_table_file:
                 lookup_table = json.load(lookup_table_file)
@@ -32,9 +37,13 @@ class Sample:
             with open(os.path.join("/nfs/dust/cms/user/mkomm/HNL/LLP/yields_201117", year, "eventyields.json")) as json_file:
                 yields = json.load(json_file)
             with open(os.path.join("/nfs/dust/cms/user/mkomm/HNL/LLP/yields_201117", year, "eventyieldsHNL.json")) as json_file:
-                yieldsHNL = json.load(json_file)        
+                self.yieldsHNL = json.load(json_file)      
+            with open(os.path.join("/nfs/dust/cms/user/mkomm/HNL/LLP/yields_230309", year, "eventyieldsHNL.json")) as json_file:
+                self.yieldsHNL.update(json.load(json_file))  
             with open("/nfs/dust/cms/user/mkomm/HNL/LLP/filterTable.json") as json_file:
                 gen_filter = json.load(json_file)
+            with open("/nfs/dust/cms/user/mkomm/HNL/LLP/filterLPairTable.json") as json_file:
+                gen_filter.update(json.load(json_file))
                 
             with open("/nfs/dust/cms/user/mkomm/HNL/LLP/gridpackLookupTable.json") as lookup_table_file:
                 lookup_table = json.load(lookup_table_file)
@@ -58,12 +67,10 @@ class Sample:
                 if "HNL" not in name:
                     self.sum_weight += yields[path]["weighted"]
                 else:
-                    self.sum_weightHNL = {}
-                    self.sum_weight = 1.
-                    for coupling in range(1, 68):
-                        self.sum_weightHNL[coupling] = yieldsHNL[path]["LHEWeights_coupling_{}".format(coupling)]
+                    self.sum_weight=1. #dummy value 
         self.rdf = ROOT.RDataFrame("Friends", self.file_list)
         count = self.rdf.Count().GetValue()
+        print (name,count)
         #if count > 0:
         if cut is not None:
             self.rdf = self.rdf.Define("sample_cut", cut)
@@ -74,10 +81,10 @@ class Sample:
 
         if self.isMC:
             if "HNL" in name:
-                print(name)
                 if not limits:
-
-                    if "pt20" in name:
+                    if "ntau" in name:
+                        lu_infos = lookup_table[name.replace('ntau0', 'all').replace('ntau1', 'all').replace('ntau2', 'all')]['weights'][str(int(coupling))]
+                    elif "pt20" in name:
                         lu_infos = lookup_table[name.replace('pt20', 'all')]['weights'][str(int(coupling))]
                     else:
                         lu_infos = lookup_table[name]['weights'][str(int(coupling))]
@@ -87,20 +94,29 @@ class Sample:
             else:
                 xsec = find_xsec(path, xsecs)
 
-            self.rdf = self.rdf.Define("weightNominal", f"IsoMuTrigger_weight_trigger_nominal*tightMuons_weight_iso_nominal*\
-                tightMuons_weight_id_nominal*tightElectrons_weight_id_nominal*puweight_nominal*genweight*\
-                tightElectrons_weight_reco_nominal*hnlJet_track_weight_nominal*lepton2_track_nominal*\
-                looseMuons_weight_id_nominal*looseElectrons_weight_id_nominal*looseMuons_weight_reco_nominal*looseElectrons_weight_reco_nominal*\
-                {lumi[year]}*1000.0*{xsec}/{self.sum_weight}")
-                
+            self.rdf = self.rdf.Define("weightNominal", f"IsoMuTrigger_weight_trigger_nominal*\
+                tightMuons_weight_iso_nominal*tightMuons_weight_id_nominal*tightMuons_weight_reco_nominal*\
+                tightElectrons_weight_id_nominal*tightElectrons_weight_reco_nominal*\
+                looseMuons_weight_reco_nominal*looseMuons_weight_id_nominal*\
+                looseElectrons_weight_id_nominal*\
+                puweight_nominal*genweight*hnlJet_track_weight_nominal*lepton2_track_nominal*\
+                {lumi[year]}*1000.0*{xsec}/{self.sum_weight}") #NB: weight will be 1. for HNL
+            
+
             #self.rdf = self.rdf.Define("weightNominalCorrectedUp", "weightNominal*hnlJet_track_weight_adapted_nominal")
 
             if "HNL" in name:
                 for coupling in range(1, 68):
-                    if "pt20" in name:
-                        self.rdf = self.rdf.Define("weightNominalHNL_{}".format(coupling), f"{gen_filter[name]['weights'][str(coupling)]['eff']}*weightNominal*LHEWeights_coupling_{coupling}/{self.sum_weightHNL[coupling]}")
+                    if ("pt20" in name) or ("ntau" in name):
+                        filtereff = gen_filter[name]['weights'][str(coupling)]['eff']
+                        weightNormSum = self.yieldsHNL[name+"-"+str(year)]['LHEWeights_coupling_'+str(coupling)]
+                        if filtereff<1e-8 and weightNormSum<1e-8:
+                            filtereff = 0.0
+                            weightNormSum = 1.0
+                        self.rdf = self.rdf.Define("weightNominalHNL_{}".format(coupling), f"{filtereff}*weightNominal*LHEWeights_coupling_{coupling}/{weightNormSum}")
                     else:
-                        self.rdf = self.rdf.Define("weightNominalHNL_{}".format(coupling), f"weightNominal*LHEWeights_coupling_{coupling}/{self.sum_weightHNL[coupling]}")
+                        weightNormSum = self.yieldsHNL[name+"-"+str(year)]['LHEWeights_coupling_'+str(coupling)]
+                        self.rdf = self.rdf.Define("weightNominalHNL_{}".format(coupling), f"weightNominal*LHEWeights_coupling_{coupling}/{weightNormSum}")
 
         else:
             self.rdf = self.rdf.Define("weightNominal", "1")

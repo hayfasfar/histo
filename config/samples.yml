@@ -1,43 +1,43 @@
 qcd:
     2016:
         qcd_15to20:
-            ["QCD_Pt-15to20_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-15to20_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_20to30: 
-            ["QCD_Pt-20to30_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-20to30_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_30to50:
-            ["QCD_Pt-30to50_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-30to50_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_50to80:
-            ["QCD_Pt-50to80_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-50to80_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_80to120: 
-            ["QCD_Pt-80to120_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-80to120_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_120to170:
-            ["QCD_Pt-120to170_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-120to170_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_170to300:
-            ["QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_300to470:
-            ["QCD_Pt-300to470_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-300to470_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_470to600:
-            ["QCD_Pt-470to600_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-470to600_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_600to800:
-            ["QCD_Pt-600to800_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-600to800_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_800to1000:
-            ["QCD_Pt-800to1000_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-800to1000_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_1000toInf:
-            ["QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_20to30_EM:
-            ["QCD_Pt-20to30_EMEnriched_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-20to30_EMEnriched_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_30to50_EM:
-            ["QCD_Pt-30to50_EMEnriched_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-30to50_EMEnriched_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_50to80_EM:
-            ["QCD_Pt-50to80_EMEnriched_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-50to80_EMEnriched_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_80to120_EM:
-            ["QCD_Pt-80to120_EMEnriched_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-80to120_EMEnriched_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_120to170_EM:
-            ["QCD_Pt-120to170_EMEnriched_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-120to170_EMEnriched_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_170to300_EM:
-            ["QCD_Pt-170to300_EMEnriched_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-170to300_EMEnriched_TuneCUETP8M1_13TeV_pythia8:"]
         qcd_300toInf_EM:
-            ["QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8-2016"]
+            ["QCD_Pt-300toInf_EMEnriched_TuneCUETP8M1_13TeV_pythia8:"]
     2017:
         qcd_15to20: 
             ["QCD_Pt-15to20_MuEnrichedPt5_TuneCP5_13TeV_pythia8-2017"] 
@@ -120,19 +120,19 @@ qcd:
 topbkg:
     2016:
         ttsemilep:
-            ["TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8-2016"]
+            ["TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8:"]
         ttdilep:
-            ["TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8-2016"]
+            ["TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8:"]
         #tthad:
-            #["TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8-2016"]
+            #["TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8:"]
         st_t_top:
-            ["ST_t-channel_top_4f_inclusiveDecays_13TeV-powhegV2-madspin-pythia8_TuneCUETP8M1-2016"]
+            ["ST_t-channel_top_4f_inclusiveDecays_13TeV-powhegV2-madspin-pythia8_TuneCUETP8M1:"]
         st_t_antitop:
-            ["ST_t-channel_antitop_4f_inclusiveDecays_13TeV-powhegV2-madspin-pythia8-2016"]
+            ["ST_t-channel_antitop_4f_inclusiveDecays_13TeV-powhegV2-madspin-pythia8:"]
         st_tW_top:
-            ["ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1-2016"]
+            ["ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1:"]
         st_tW_antitop:
-            ["ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1-2016"]
+            ["ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1:"]
 
     2017:
         ttsemilep:
@@ -169,11 +169,11 @@ topbkg:
 wjets:
     2016:
         w0jets:
-            ["WToLNu_0J_13TeV-amcatnloFXFX-pythia8-ext1-2016"]
+            ["WToLNu_0J_13TeV-amcatnloFXFX-pythia8-ext1:"]
         w1jets:
-            ["WToLNu_1J_13TeV-amcatnloFXFX-pythia8-2016"]
+            ["WToLNu_1J_13TeV-amcatnloFXFX-pythia8:"]
         w2jets:
-            ["WToLNu_2J_13TeV-amcatnloFXFX-pythia8-ext4-2016"]
+            ["WToLNu_2J_13TeV-amcatnloFXFX-pythia8-ext4:"]
     2017:
         w0jets:
             ["WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8-2017"]
@@ -191,9 +191,9 @@ wjets:
 dyjets:
     2016:
         dy10to50:
-            ["DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8-2016"]
+            ["DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8:"]
         dy50:
-            ["DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8-ext2-2016"]
+            ["DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8-ext2:"]
 
     2017:
         dy10to50:
@@ -208,9 +208,9 @@ dyjets:
 vgamma: 
     2016:
         wg:
-            ["WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-2016"]
+            ["WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8:"]
         zg: 
-            ["ZGToLLG_01J_5f_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8-2016"]
+            ["ZGToLLG_01J_5f_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8:"]
     2017:
         wg:
             ["WGToLNuG_TuneCP5_13TeV-madgraphMLM-pythia8-2017"]
@@ -463,3 +463,243 @@ HNL_dirac_pt20_ctau1p0e02_massHNL6p0_Vall6p496e-04:
 HNL_dirac_pt20_ctau1p0e-03_massHNL16p0_Vall1p551e-02:
 HNL_dirac_pt20_ctau1p0e03_massHNL2p0_Vall4p066e-03:
 HNL_dirac_pt20_ctau1p0e03_massHNL3p0_Vall1p388e-03:
+
+
+HNL_dirac_ntau_ctau1p0e-01_massHNL10p0_Vall5p262e-03: [HNL_dirac_ntau0_ctau1p0e-01_massHNL10p0_Vall5p262e-03,
+    HNL_dirac_ntau1_ctau1p0e-01_massHNL10p0_Vall5p262e-03, HNL_dirac_ntau2_ctau1p0e-01_massHNL10p0_Vall5p262e-03]
+HNL_dirac_ntau_ctau1p0e-01_massHNL12p0_Vall3p272e-03: [HNL_dirac_ntau0_ctau1p0e-01_massHNL12p0_Vall3p272e-03,
+    HNL_dirac_ntau1_ctau1p0e-01_massHNL12p0_Vall3p272e-03, HNL_dirac_ntau2_ctau1p0e-01_massHNL12p0_Vall3p272e-03]
+HNL_dirac_ntau_ctau1p0e-01_massHNL14p0_Vall2p193e-03: [HNL_dirac_ntau0_ctau1p0e-01_massHNL14p0_Vall2p193e-03,
+    HNL_dirac_ntau1_ctau1p0e-01_massHNL14p0_Vall2p193e-03, HNL_dirac_ntau2_ctau1p0e-01_massHNL14p0_Vall2p193e-03]
+HNL_dirac_ntau_ctau1p0e-01_massHNL16p0_Vall1p551e-03: [HNL_dirac_ntau0_ctau1p0e-01_massHNL16p0_Vall1p551e-03,
+    HNL_dirac_ntau1_ctau1p0e-01_massHNL16p0_Vall1p551e-03, HNL_dirac_ntau2_ctau1p0e-01_massHNL16p0_Vall1p551e-03]
+HNL_dirac_ntau_ctau1p0e-01_massHNL18p0_Vall1p144e-03: [HNL_dirac_ntau0_ctau1p0e-01_massHNL18p0_Vall1p144e-03,
+    HNL_dirac_ntau1_ctau1p0e-01_massHNL18p0_Vall1p144e-03, HNL_dirac_ntau2_ctau1p0e-01_massHNL18p0_Vall1p144e-03]
+HNL_dirac_ntau_ctau1p0e-01_massHNL20p0_Vall8p709e-04: [HNL_dirac_ntau0_ctau1p0e-01_massHNL20p0_Vall8p709e-04,
+    HNL_dirac_ntau1_ctau1p0e-01_massHNL20p0_Vall8p709e-04, HNL_dirac_ntau2_ctau1p0e-01_massHNL20p0_Vall8p709e-04]
+HNL_dirac_ntau_ctau1p0e-01_massHNL8p0_Vall9p475e-03: [HNL_dirac_ntau0_ctau1p0e-01_massHNL8p0_Vall9p475e-03,
+    HNL_dirac_ntau1_ctau1p0e-01_massHNL8p0_Vall9p475e-03, HNL_dirac_ntau2_ctau1p0e-01_massHNL8p0_Vall9p475e-03]
+HNL_dirac_ntau_ctau1p0e-02_massHNL10p0_Vall1p664e-02: [HNL_dirac_ntau0_ctau1p0e-02_massHNL10p0_Vall1p664e-02,
+    HNL_dirac_ntau1_ctau1p0e-02_massHNL10p0_Vall1p664e-02, HNL_dirac_ntau2_ctau1p0e-02_massHNL10p0_Vall1p664e-02]
+HNL_dirac_ntau_ctau1p0e-02_massHNL12p0_Vall1p035e-02: [HNL_dirac_ntau0_ctau1p0e-02_massHNL12p0_Vall1p035e-02,
+    HNL_dirac_ntau1_ctau1p0e-02_massHNL12p0_Vall1p035e-02, HNL_dirac_ntau2_ctau1p0e-02_massHNL12p0_Vall1p035e-02]
+HNL_dirac_ntau_ctau1p0e-02_massHNL14p0_Vall6p933e-03: [HNL_dirac_ntau0_ctau1p0e-02_massHNL14p0_Vall6p933e-03,
+    HNL_dirac_ntau1_ctau1p0e-02_massHNL14p0_Vall6p933e-03, HNL_dirac_ntau2_ctau1p0e-02_massHNL14p0_Vall6p933e-03]
+HNL_dirac_ntau_ctau1p0e-02_massHNL16p0_Vall4p905e-03: [HNL_dirac_ntau0_ctau1p0e-02_massHNL16p0_Vall4p905e-03,
+    HNL_dirac_ntau1_ctau1p0e-02_massHNL16p0_Vall4p905e-03, HNL_dirac_ntau2_ctau1p0e-02_massHNL16p0_Vall4p905e-03]
+HNL_dirac_ntau_ctau1p0e-02_massHNL18p0_Vall3p617e-03: [HNL_dirac_ntau0_ctau1p0e-02_massHNL18p0_Vall3p617e-03,
+    HNL_dirac_ntau1_ctau1p0e-02_massHNL18p0_Vall3p617e-03, HNL_dirac_ntau2_ctau1p0e-02_massHNL18p0_Vall3p617e-03]
+HNL_dirac_ntau_ctau1p0e-02_massHNL20p0_Vall2p754e-03: [HNL_dirac_ntau0_ctau1p0e-02_massHNL20p0_Vall2p754e-03,
+    HNL_dirac_ntau1_ctau1p0e-02_massHNL20p0_Vall2p754e-03, HNL_dirac_ntau2_ctau1p0e-02_massHNL20p0_Vall2p754e-03]
+HNL_dirac_ntau_ctau1p0e-03_massHNL12p0_Vall3p272e-02: [HNL_dirac_ntau0_ctau1p0e-03_massHNL12p0_Vall3p272e-02,
+    HNL_dirac_ntau1_ctau1p0e-03_massHNL12p0_Vall3p272e-02, HNL_dirac_ntau2_ctau1p0e-03_massHNL12p0_Vall3p272e-02]
+HNL_dirac_ntau_ctau1p0e-03_massHNL14p0_Vall2p193e-02: [HNL_dirac_ntau0_ctau1p0e-03_massHNL14p0_Vall2p193e-02,
+    HNL_dirac_ntau1_ctau1p0e-03_massHNL14p0_Vall2p193e-02, HNL_dirac_ntau2_ctau1p0e-03_massHNL14p0_Vall2p193e-02]
+HNL_dirac_ntau_ctau1p0e-03_massHNL16p0_Vall1p551e-02: [HNL_dirac_ntau0_ctau1p0e-03_massHNL16p0_Vall1p551e-02,
+    HNL_dirac_ntau1_ctau1p0e-03_massHNL16p0_Vall1p551e-02, HNL_dirac_ntau2_ctau1p0e-03_massHNL16p0_Vall1p551e-02]
+HNL_dirac_ntau_ctau1p0e-03_massHNL18p0_Vall1p144e-02: [HNL_dirac_ntau0_ctau1p0e-03_massHNL18p0_Vall1p144e-02,
+    HNL_dirac_ntau1_ctau1p0e-03_massHNL18p0_Vall1p144e-02, HNL_dirac_ntau2_ctau1p0e-03_massHNL18p0_Vall1p144e-02]
+HNL_dirac_ntau_ctau1p0e-03_massHNL20p0_Vall8p709e-03: [HNL_dirac_ntau0_ctau1p0e-03_massHNL20p0_Vall8p709e-03,
+    HNL_dirac_ntau1_ctau1p0e-03_massHNL20p0_Vall8p709e-03, HNL_dirac_ntau2_ctau1p0e-03_massHNL20p0_Vall8p709e-03]
+HNL_dirac_ntau_ctau1p0e-04_massHNL14p0_Vall6p933e-02: [HNL_dirac_ntau0_ctau1p0e-04_massHNL14p0_Vall6p933e-02,
+    HNL_dirac_ntau1_ctau1p0e-04_massHNL14p0_Vall6p933e-02, HNL_dirac_ntau2_ctau1p0e-04_massHNL14p0_Vall6p933e-02]
+HNL_dirac_ntau_ctau1p0e-04_massHNL16p0_Vall4p905e-02: [HNL_dirac_ntau0_ctau1p0e-04_massHNL16p0_Vall4p905e-02,
+    HNL_dirac_ntau1_ctau1p0e-04_massHNL16p0_Vall4p905e-02, HNL_dirac_ntau2_ctau1p0e-04_massHNL16p0_Vall4p905e-02]
+HNL_dirac_ntau_ctau1p0e-04_massHNL18p0_Vall3p617e-02: [HNL_dirac_ntau0_ctau1p0e-04_massHNL18p0_Vall3p617e-02,
+    HNL_dirac_ntau1_ctau1p0e-04_massHNL18p0_Vall3p617e-02, HNL_dirac_ntau2_ctau1p0e-04_massHNL18p0_Vall3p617e-02]
+HNL_dirac_ntau_ctau1p0e-04_massHNL20p0_Vall2p754e-02: [HNL_dirac_ntau0_ctau1p0e-04_massHNL20p0_Vall2p754e-02,
+    HNL_dirac_ntau1_ctau1p0e-04_massHNL20p0_Vall2p754e-02, HNL_dirac_ntau2_ctau1p0e-04_massHNL20p0_Vall2p754e-02]
+HNL_dirac_ntau_ctau1p0e00_massHNL10p0_Vall1p664e-03: [HNL_dirac_ntau0_ctau1p0e00_massHNL10p0_Vall1p664e-03,
+    HNL_dirac_ntau1_ctau1p0e00_massHNL10p0_Vall1p664e-03, HNL_dirac_ntau2_ctau1p0e00_massHNL10p0_Vall1p664e-03]
+HNL_dirac_ntau_ctau1p0e00_massHNL12p0_Vall1p035e-03: [HNL_dirac_ntau0_ctau1p0e00_massHNL12p0_Vall1p035e-03,
+    HNL_dirac_ntau1_ctau1p0e00_massHNL12p0_Vall1p035e-03, HNL_dirac_ntau2_ctau1p0e00_massHNL12p0_Vall1p035e-03]
+HNL_dirac_ntau_ctau1p0e00_massHNL14p0_Vall6p933e-04: [HNL_dirac_ntau0_ctau1p0e00_massHNL14p0_Vall6p933e-04,
+    HNL_dirac_ntau1_ctau1p0e00_massHNL14p0_Vall6p933e-04, HNL_dirac_ntau2_ctau1p0e00_massHNL14p0_Vall6p933e-04]
+HNL_dirac_ntau_ctau1p0e00_massHNL16p0_Vall4p905e-04: [HNL_dirac_ntau0_ctau1p0e00_massHNL16p0_Vall4p905e-04,
+    HNL_dirac_ntau1_ctau1p0e00_massHNL16p0_Vall4p905e-04, HNL_dirac_ntau2_ctau1p0e00_massHNL16p0_Vall4p905e-04]
+HNL_dirac_ntau_ctau1p0e00_massHNL18p0_Vall3p617e-04: [HNL_dirac_ntau0_ctau1p0e00_massHNL18p0_Vall3p617e-04,
+    HNL_dirac_ntau1_ctau1p0e00_massHNL18p0_Vall3p617e-04, HNL_dirac_ntau2_ctau1p0e00_massHNL18p0_Vall3p617e-04]
+HNL_dirac_ntau_ctau1p0e00_massHNL4p5_Vall1p438e-02: [HNL_dirac_ntau0_ctau1p0e00_massHNL4p5_Vall1p438e-02,
+    HNL_dirac_ntau1_ctau1p0e00_massHNL4p5_Vall1p438e-02, HNL_dirac_ntau2_ctau1p0e00_massHNL4p5_Vall1p438e-02]
+HNL_dirac_ntau_ctau1p0e00_massHNL6p0_Vall6p496e-03: [HNL_dirac_ntau0_ctau1p0e00_massHNL6p0_Vall6p496e-03,
+    HNL_dirac_ntau1_ctau1p0e00_massHNL6p0_Vall6p496e-03, HNL_dirac_ntau2_ctau1p0e00_massHNL6p0_Vall6p496e-03]
+HNL_dirac_ntau_ctau1p0e00_massHNL8p0_Vall2p996e-03: [HNL_dirac_ntau0_ctau1p0e00_massHNL8p0_Vall2p996e-03,
+    HNL_dirac_ntau1_ctau1p0e00_massHNL8p0_Vall2p996e-03, HNL_dirac_ntau2_ctau1p0e00_massHNL8p0_Vall2p996e-03]
+HNL_dirac_ntau_ctau1p0e01_massHNL10p0_Vall5p262e-04: [HNL_dirac_ntau0_ctau1p0e01_massHNL10p0_Vall5p262e-04,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL10p0_Vall5p262e-04, HNL_dirac_ntau2_ctau1p0e01_massHNL10p0_Vall5p262e-04]
+HNL_dirac_ntau_ctau1p0e01_massHNL12p0_Vall3p272e-04: [HNL_dirac_ntau0_ctau1p0e01_massHNL12p0_Vall3p272e-04,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL12p0_Vall3p272e-04, HNL_dirac_ntau2_ctau1p0e01_massHNL12p0_Vall3p272e-04]
+HNL_dirac_ntau_ctau1p0e01_massHNL14p0_Vall2p193e-04: [HNL_dirac_ntau0_ctau1p0e01_massHNL14p0_Vall2p193e-04,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL14p0_Vall2p193e-04, HNL_dirac_ntau2_ctau1p0e01_massHNL14p0_Vall2p193e-04]
+HNL_dirac_ntau_ctau1p0e01_massHNL16p0_Vall1p551e-04: [HNL_dirac_ntau0_ctau1p0e01_massHNL16p0_Vall1p551e-04,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL16p0_Vall1p551e-04, HNL_dirac_ntau2_ctau1p0e01_massHNL16p0_Vall1p551e-04]
+HNL_dirac_ntau_ctau1p0e01_massHNL18p0_Vall1p144e-04: [HNL_dirac_ntau0_ctau1p0e01_massHNL18p0_Vall1p144e-04,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL18p0_Vall1p144e-04, HNL_dirac_ntau2_ctau1p0e01_massHNL18p0_Vall1p144e-04]
+HNL_dirac_ntau_ctau1p0e01_massHNL1p0_Vall2p359e-01: [HNL_dirac_ntau0_ctau1p0e01_massHNL1p0_Vall2p359e-01,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL1p0_Vall2p359e-01]
+HNL_dirac_ntau_ctau1p0e01_massHNL1p5_Vall8p442e-02: [HNL_dirac_ntau0_ctau1p0e01_massHNL1p5_Vall8p442e-02,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL1p5_Vall8p442e-02]
+HNL_dirac_ntau_ctau1p0e01_massHNL2p0_Vall4p066e-02: [HNL_dirac_ntau0_ctau1p0e01_massHNL2p0_Vall4p066e-02,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL2p0_Vall4p066e-02]
+HNL_dirac_ntau_ctau1p0e01_massHNL3p0_Vall1p388e-02: [HNL_dirac_ntau0_ctau1p0e01_massHNL3p0_Vall1p388e-02,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL3p0_Vall1p388e-02, HNL_dirac_ntau2_ctau1p0e01_massHNL3p0_Vall1p388e-02]
+HNL_dirac_ntau_ctau1p0e01_massHNL4p5_Vall4p549e-03: [HNL_dirac_ntau0_ctau1p0e01_massHNL4p5_Vall4p549e-03,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL4p5_Vall4p549e-03, HNL_dirac_ntau2_ctau1p0e01_massHNL4p5_Vall4p549e-03]
+HNL_dirac_ntau_ctau1p0e01_massHNL6p0_Vall2p054e-03: [HNL_dirac_ntau0_ctau1p0e01_massHNL6p0_Vall2p054e-03,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL6p0_Vall2p054e-03, HNL_dirac_ntau2_ctau1p0e01_massHNL6p0_Vall2p054e-03]
+HNL_dirac_ntau_ctau1p0e01_massHNL8p0_Vall9p475e-04: [HNL_dirac_ntau0_ctau1p0e01_massHNL8p0_Vall9p475e-04,
+    HNL_dirac_ntau1_ctau1p0e01_massHNL8p0_Vall9p475e-04, HNL_dirac_ntau2_ctau1p0e01_massHNL8p0_Vall9p475e-04]
+HNL_dirac_ntau_ctau1p0e02_massHNL10p0_Vall1p664e-04: [HNL_dirac_ntau0_ctau1p0e02_massHNL10p0_Vall1p664e-04,
+    HNL_dirac_ntau1_ctau1p0e02_massHNL10p0_Vall1p664e-04, HNL_dirac_ntau2_ctau1p0e02_massHNL10p0_Vall1p664e-04]
+HNL_dirac_ntau_ctau1p0e02_massHNL1p0_Vall7p460e-02: [HNL_dirac_ntau0_ctau1p0e02_massHNL1p0_Vall7p460e-02,
+    HNL_dirac_ntau1_ctau1p0e02_massHNL1p0_Vall7p460e-02]
+HNL_dirac_ntau_ctau1p0e02_massHNL1p5_Vall2p670e-02: [HNL_dirac_ntau0_ctau1p0e02_massHNL1p5_Vall2p670e-02,
+    HNL_dirac_ntau1_ctau1p0e02_massHNL1p5_Vall2p670e-02]
+HNL_dirac_ntau_ctau1p0e02_massHNL2p0_Vall1p286e-02: [HNL_dirac_ntau0_ctau1p0e02_massHNL2p0_Vall1p286e-02,
+    HNL_dirac_ntau1_ctau1p0e02_massHNL2p0_Vall1p286e-02]
+HNL_dirac_ntau_ctau1p0e02_massHNL3p0_Vall4p390e-03: [HNL_dirac_ntau0_ctau1p0e02_massHNL3p0_Vall4p390e-03,
+    HNL_dirac_ntau1_ctau1p0e02_massHNL3p0_Vall4p390e-03, HNL_dirac_ntau2_ctau1p0e02_massHNL3p0_Vall4p390e-03]
+HNL_dirac_ntau_ctau1p0e02_massHNL4p5_Vall1p438e-03: [HNL_dirac_ntau0_ctau1p0e02_massHNL4p5_Vall1p438e-03,
+    HNL_dirac_ntau1_ctau1p0e02_massHNL4p5_Vall1p438e-03, HNL_dirac_ntau2_ctau1p0e02_massHNL4p5_Vall1p438e-03]
+HNL_dirac_ntau_ctau1p0e02_massHNL6p0_Vall6p496e-04: [HNL_dirac_ntau0_ctau1p0e02_massHNL6p0_Vall6p496e-04,
+    HNL_dirac_ntau1_ctau1p0e02_massHNL6p0_Vall6p496e-04, HNL_dirac_ntau2_ctau1p0e02_massHNL6p0_Vall6p496e-04]
+HNL_dirac_ntau_ctau1p0e02_massHNL8p0_Vall2p996e-04: [HNL_dirac_ntau0_ctau1p0e02_massHNL8p0_Vall2p996e-04,
+    HNL_dirac_ntau1_ctau1p0e02_massHNL8p0_Vall2p996e-04, HNL_dirac_ntau2_ctau1p0e02_massHNL8p0_Vall2p996e-04]
+HNL_dirac_ntau_ctau1p0e03_massHNL1p0_Vall2p359e-02: [HNL_dirac_ntau0_ctau1p0e03_massHNL1p0_Vall2p359e-02,
+    HNL_dirac_ntau1_ctau1p0e03_massHNL1p0_Vall2p359e-02]
+HNL_dirac_ntau_ctau1p0e03_massHNL1p5_Vall8p442e-03: [HNL_dirac_ntau0_ctau1p0e03_massHNL1p5_Vall8p442e-03,
+    HNL_dirac_ntau1_ctau1p0e03_massHNL1p5_Vall8p442e-03]
+HNL_dirac_ntau_ctau1p0e03_massHNL2p0_Vall4p066e-03: [HNL_dirac_ntau0_ctau1p0e03_massHNL2p0_Vall4p066e-03,
+    HNL_dirac_ntau1_ctau1p0e03_massHNL2p0_Vall4p066e-03]
+HNL_dirac_ntau_ctau1p0e03_massHNL3p0_Vall1p388e-03: [HNL_dirac_ntau0_ctau1p0e03_massHNL3p0_Vall1p388e-03,
+    HNL_dirac_ntau1_ctau1p0e03_massHNL3p0_Vall1p388e-03, HNL_dirac_ntau2_ctau1p0e03_massHNL3p0_Vall1p388e-03]
+HNL_dirac_ntau_ctau1p0e03_massHNL4p5_Vall4p549e-04: [HNL_dirac_ntau0_ctau1p0e03_massHNL4p5_Vall4p549e-04,
+    HNL_dirac_ntau1_ctau1p0e03_massHNL4p5_Vall4p549e-04, HNL_dirac_ntau2_ctau1p0e03_massHNL4p5_Vall4p549e-04]
+HNL_dirac_ntau_ctau1p0e03_massHNL6p0_Vall2p054e-04: [HNL_dirac_ntau0_ctau1p0e03_massHNL6p0_Vall2p054e-04,
+    HNL_dirac_ntau1_ctau1p0e03_massHNL6p0_Vall2p054e-04, HNL_dirac_ntau2_ctau1p0e03_massHNL6p0_Vall2p054e-04]
+HNL_dirac_ntau_ctau1p0e04_massHNL1p0_Vall7p460e-03: [HNL_dirac_ntau0_ctau1p0e04_massHNL1p0_Vall7p460e-03,
+    HNL_dirac_ntau1_ctau1p0e04_massHNL1p0_Vall7p460e-03]
+HNL_dirac_ntau_ctau1p0e04_massHNL1p5_Vall2p670e-03: [HNL_dirac_ntau0_ctau1p0e04_massHNL1p5_Vall2p670e-03,
+    HNL_dirac_ntau1_ctau1p0e04_massHNL1p5_Vall2p670e-03]
+HNL_dirac_ntau_ctau1p0e04_massHNL2p0_Vall1p286e-03: [HNL_dirac_ntau0_ctau1p0e04_massHNL2p0_Vall1p286e-03,
+    HNL_dirac_ntau1_ctau1p0e04_massHNL2p0_Vall1p286e-03]
+
+
+HNL_majorana_ntau_ctau1p0e-01_massHNL10p0_Vall3p721e-03: [HNL_majorana_ntau0_ctau1p0e-01_massHNL10p0_Vall3p721e-03,
+    HNL_majorana_ntau1_ctau1p0e-01_massHNL10p0_Vall3p721e-03, HNL_majorana_ntau2_ctau1p0e-01_massHNL10p0_Vall3p721e-03]
+HNL_majorana_ntau_ctau1p0e-01_massHNL12p0_Vall2p314e-03: [HNL_majorana_ntau0_ctau1p0e-01_massHNL12p0_Vall2p314e-03,
+    HNL_majorana_ntau1_ctau1p0e-01_massHNL12p0_Vall2p314e-03, HNL_majorana_ntau2_ctau1p0e-01_massHNL12p0_Vall2p314e-03]
+HNL_majorana_ntau_ctau1p0e-01_massHNL14p0_Vall1p551e-03: [HNL_majorana_ntau0_ctau1p0e-01_massHNL14p0_Vall1p551e-03,
+    HNL_majorana_ntau1_ctau1p0e-01_massHNL14p0_Vall1p551e-03, HNL_majorana_ntau2_ctau1p0e-01_massHNL14p0_Vall1p551e-03]
+HNL_majorana_ntau_ctau1p0e-01_massHNL16p0_Vall1p097e-03: [HNL_majorana_ntau0_ctau1p0e-01_massHNL16p0_Vall1p097e-03,
+    HNL_majorana_ntau1_ctau1p0e-01_massHNL16p0_Vall1p097e-03, HNL_majorana_ntau2_ctau1p0e-01_massHNL16p0_Vall1p097e-03]
+HNL_majorana_ntau_ctau1p0e-01_massHNL18p0_Vall8p092e-04: [HNL_majorana_ntau0_ctau1p0e-01_massHNL18p0_Vall8p092e-04,
+    HNL_majorana_ntau1_ctau1p0e-01_massHNL18p0_Vall8p092e-04, HNL_majorana_ntau2_ctau1p0e-01_massHNL18p0_Vall8p092e-04]
+HNL_majorana_ntau_ctau1p0e-01_massHNL20p0_Vall6p165e-04: [HNL_majorana_ntau0_ctau1p0e-01_massHNL20p0_Vall6p165e-04,
+    HNL_majorana_ntau1_ctau1p0e-01_massHNL20p0_Vall6p165e-04, HNL_majorana_ntau2_ctau1p0e-01_massHNL20p0_Vall6p165e-04]
+HNL_majorana_ntau_ctau1p0e-01_massHNL8p0_Vall6p702e-03: [HNL_majorana_ntau0_ctau1p0e-01_massHNL8p0_Vall6p702e-03,
+    HNL_majorana_ntau1_ctau1p0e-01_massHNL8p0_Vall6p702e-03, HNL_majorana_ntau2_ctau1p0e-01_massHNL8p0_Vall6p702e-03]
+HNL_majorana_ntau_ctau1p0e-02_massHNL10p0_Vall1p177e-02: [HNL_majorana_ntau0_ctau1p0e-02_massHNL10p0_Vall1p177e-02,
+    HNL_majorana_ntau1_ctau1p0e-02_massHNL10p0_Vall1p177e-02, HNL_majorana_ntau2_ctau1p0e-02_massHNL10p0_Vall1p177e-02]
+HNL_majorana_ntau_ctau1p0e-02_massHNL12p0_Vall7p319e-03: [HNL_majorana_ntau0_ctau1p0e-02_massHNL12p0_Vall7p319e-03,
+    HNL_majorana_ntau1_ctau1p0e-02_massHNL12p0_Vall7p319e-03, HNL_majorana_ntau2_ctau1p0e-02_massHNL12p0_Vall7p319e-03]
+HNL_majorana_ntau_ctau1p0e-02_massHNL14p0_Vall4p904e-03: [HNL_majorana_ntau0_ctau1p0e-02_massHNL14p0_Vall4p904e-03,
+    HNL_majorana_ntau1_ctau1p0e-02_massHNL14p0_Vall4p904e-03, HNL_majorana_ntau2_ctau1p0e-02_massHNL14p0_Vall4p904e-03]
+HNL_majorana_ntau_ctau1p0e-02_massHNL16p0_Vall3p470e-03: [HNL_majorana_ntau0_ctau1p0e-02_massHNL16p0_Vall3p470e-03,
+    HNL_majorana_ntau1_ctau1p0e-02_massHNL16p0_Vall3p470e-03, HNL_majorana_ntau2_ctau1p0e-02_massHNL16p0_Vall3p470e-03]
+HNL_majorana_ntau_ctau1p0e-02_massHNL18p0_Vall2p559e-03: [HNL_majorana_ntau0_ctau1p0e-02_massHNL18p0_Vall2p559e-03,
+    HNL_majorana_ntau1_ctau1p0e-02_massHNL18p0_Vall2p559e-03, HNL_majorana_ntau2_ctau1p0e-02_massHNL18p0_Vall2p559e-03]
+HNL_majorana_ntau_ctau1p0e-02_massHNL20p0_Vall1p950e-03: [HNL_majorana_ntau0_ctau1p0e-02_massHNL20p0_Vall1p950e-03,
+    HNL_majorana_ntau1_ctau1p0e-02_massHNL20p0_Vall1p950e-03, HNL_majorana_ntau2_ctau1p0e-02_massHNL20p0_Vall1p950e-03]
+HNL_majorana_ntau_ctau1p0e-03_massHNL12p0_Vall2p314e-02: [HNL_majorana_ntau0_ctau1p0e-03_massHNL12p0_Vall2p314e-02,
+    HNL_majorana_ntau1_ctau1p0e-03_massHNL12p0_Vall2p314e-02, HNL_majorana_ntau2_ctau1p0e-03_massHNL12p0_Vall2p314e-02]
+HNL_majorana_ntau_ctau1p0e-03_massHNL14p0_Vall1p551e-02: [HNL_majorana_ntau0_ctau1p0e-03_massHNL14p0_Vall1p551e-02,
+    HNL_majorana_ntau1_ctau1p0e-03_massHNL14p0_Vall1p551e-02, HNL_majorana_ntau2_ctau1p0e-03_massHNL14p0_Vall1p551e-02]
+HNL_majorana_ntau_ctau1p0e-03_massHNL16p0_Vall1p097e-02: [HNL_majorana_ntau0_ctau1p0e-03_massHNL16p0_Vall1p097e-02,
+    HNL_majorana_ntau1_ctau1p0e-03_massHNL16p0_Vall1p097e-02, HNL_majorana_ntau2_ctau1p0e-03_massHNL16p0_Vall1p097e-02]
+HNL_majorana_ntau_ctau1p0e-03_massHNL18p0_Vall8p092e-03: [HNL_majorana_ntau0_ctau1p0e-03_massHNL18p0_Vall8p092e-03,
+    HNL_majorana_ntau1_ctau1p0e-03_massHNL18p0_Vall8p092e-03, HNL_majorana_ntau2_ctau1p0e-03_massHNL18p0_Vall8p092e-03]
+HNL_majorana_ntau_ctau1p0e-03_massHNL20p0_Vall6p165e-03: [HNL_majorana_ntau0_ctau1p0e-03_massHNL20p0_Vall6p165e-03,
+    HNL_majorana_ntau1_ctau1p0e-03_massHNL20p0_Vall6p165e-03, HNL_majorana_ntau2_ctau1p0e-03_massHNL20p0_Vall6p165e-03]
+HNL_majorana_ntau_ctau1p0e-04_massHNL14p0_Vall4p904e-02: [HNL_majorana_ntau0_ctau1p0e-04_massHNL14p0_Vall4p904e-02,
+    HNL_majorana_ntau1_ctau1p0e-04_massHNL14p0_Vall4p904e-02, HNL_majorana_ntau2_ctau1p0e-04_massHNL14p0_Vall4p904e-02]
+HNL_majorana_ntau_ctau1p0e-04_massHNL16p0_Vall3p470e-02: [HNL_majorana_ntau0_ctau1p0e-04_massHNL16p0_Vall3p470e-02,
+    HNL_majorana_ntau1_ctau1p0e-04_massHNL16p0_Vall3p470e-02, HNL_majorana_ntau2_ctau1p0e-04_massHNL16p0_Vall3p470e-02]
+HNL_majorana_ntau_ctau1p0e-04_massHNL18p0_Vall2p559e-02: [HNL_majorana_ntau0_ctau1p0e-04_massHNL18p0_Vall2p559e-02,
+    HNL_majorana_ntau1_ctau1p0e-04_massHNL18p0_Vall2p559e-02, HNL_majorana_ntau2_ctau1p0e-04_massHNL18p0_Vall2p559e-02]
+HNL_majorana_ntau_ctau1p0e-04_massHNL20p0_Vall1p950e-02: [HNL_majorana_ntau0_ctau1p0e-04_massHNL20p0_Vall1p950e-02,
+    HNL_majorana_ntau1_ctau1p0e-04_massHNL20p0_Vall1p950e-02, HNL_majorana_ntau2_ctau1p0e-04_massHNL20p0_Vall1p950e-02]
+HNL_majorana_ntau_ctau1p0e00_massHNL10p0_Vall1p177e-03: [HNL_majorana_ntau0_ctau1p0e00_massHNL10p0_Vall1p177e-03,
+    HNL_majorana_ntau1_ctau1p0e00_massHNL10p0_Vall1p177e-03, HNL_majorana_ntau2_ctau1p0e00_massHNL10p0_Vall1p177e-03]
+HNL_majorana_ntau_ctau1p0e00_massHNL12p0_Vall7p319e-04: [HNL_majorana_ntau0_ctau1p0e00_massHNL12p0_Vall7p319e-04,
+    HNL_majorana_ntau1_ctau1p0e00_massHNL12p0_Vall7p319e-04, HNL_majorana_ntau2_ctau1p0e00_massHNL12p0_Vall7p319e-04]
+HNL_majorana_ntau_ctau1p0e00_massHNL14p0_Vall4p904e-04: [HNL_majorana_ntau0_ctau1p0e00_massHNL14p0_Vall4p904e-04,
+    HNL_majorana_ntau1_ctau1p0e00_massHNL14p0_Vall4p904e-04, HNL_majorana_ntau2_ctau1p0e00_massHNL14p0_Vall4p904e-04]
+HNL_majorana_ntau_ctau1p0e00_massHNL16p0_Vall3p470e-04: [HNL_majorana_ntau0_ctau1p0e00_massHNL16p0_Vall3p470e-04,
+    HNL_majorana_ntau1_ctau1p0e00_massHNL16p0_Vall3p470e-04, HNL_majorana_ntau2_ctau1p0e00_massHNL16p0_Vall3p470e-04]
+HNL_majorana_ntau_ctau1p0e00_massHNL18p0_Vall2p559e-04: [HNL_majorana_ntau0_ctau1p0e00_massHNL18p0_Vall2p559e-04,
+    HNL_majorana_ntau1_ctau1p0e00_massHNL18p0_Vall2p559e-04, HNL_majorana_ntau2_ctau1p0e00_massHNL18p0_Vall2p559e-04]
+HNL_majorana_ntau_ctau1p0e00_massHNL4p5_Vall1p016e-02: [HNL_majorana_ntau0_ctau1p0e00_massHNL4p5_Vall1p016e-02,
+    HNL_majorana_ntau1_ctau1p0e00_massHNL4p5_Vall1p016e-02, HNL_majorana_ntau2_ctau1p0e00_massHNL4p5_Vall1p016e-02]
+HNL_majorana_ntau_ctau1p0e00_massHNL6p0_Vall4p597e-03: [HNL_majorana_ntau0_ctau1p0e00_massHNL6p0_Vall4p597e-03,
+    HNL_majorana_ntau1_ctau1p0e00_massHNL6p0_Vall4p597e-03, HNL_majorana_ntau2_ctau1p0e00_massHNL6p0_Vall4p597e-03]
+HNL_majorana_ntau_ctau1p0e00_massHNL8p0_Vall2p119e-03: [HNL_majorana_ntau0_ctau1p0e00_massHNL8p0_Vall2p119e-03,
+    HNL_majorana_ntau1_ctau1p0e00_massHNL8p0_Vall2p119e-03, HNL_majorana_ntau2_ctau1p0e00_massHNL8p0_Vall2p119e-03]
+HNL_majorana_ntau_ctau1p0e01_massHNL10p0_Vall3p721e-04: [HNL_majorana_ntau0_ctau1p0e01_massHNL10p0_Vall3p721e-04,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL10p0_Vall3p721e-04, HNL_majorana_ntau2_ctau1p0e01_massHNL10p0_Vall3p721e-04]
+HNL_majorana_ntau_ctau1p0e01_massHNL12p0_Vall2p314e-04: [HNL_majorana_ntau0_ctau1p0e01_massHNL12p0_Vall2p314e-04,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL12p0_Vall2p314e-04, HNL_majorana_ntau2_ctau1p0e01_massHNL12p0_Vall2p314e-04]
+HNL_majorana_ntau_ctau1p0e01_massHNL14p0_Vall1p551e-04: [HNL_majorana_ntau0_ctau1p0e01_massHNL14p0_Vall1p551e-04,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL14p0_Vall1p551e-04, HNL_majorana_ntau2_ctau1p0e01_massHNL14p0_Vall1p551e-04]
+HNL_majorana_ntau_ctau1p0e01_massHNL16p0_Vall1p097e-04: [HNL_majorana_ntau0_ctau1p0e01_massHNL16p0_Vall1p097e-04,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL16p0_Vall1p097e-04, HNL_majorana_ntau2_ctau1p0e01_massHNL16p0_Vall1p097e-04]
+HNL_majorana_ntau_ctau1p0e01_massHNL18p0_Vall8p092e-05: [HNL_majorana_ntau0_ctau1p0e01_massHNL18p0_Vall8p092e-05,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL18p0_Vall8p092e-05, HNL_majorana_ntau2_ctau1p0e01_massHNL18p0_Vall8p092e-05]
+HNL_majorana_ntau_ctau1p0e01_massHNL1p0_Vall1p668e-01: [HNL_majorana_ntau0_ctau1p0e01_massHNL1p0_Vall1p668e-01,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL1p0_Vall1p668e-01]
+HNL_majorana_ntau_ctau1p0e01_massHNL1p5_Vall5p965e-02: [HNL_majorana_ntau0_ctau1p0e01_massHNL1p5_Vall5p965e-02,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL1p5_Vall5p965e-02]
+HNL_majorana_ntau_ctau1p0e01_massHNL2p0_Vall2p871e-02: [HNL_majorana_ntau0_ctau1p0e01_massHNL2p0_Vall2p871e-02,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL2p0_Vall2p871e-02]
+HNL_majorana_ntau_ctau1p0e01_massHNL3p0_Vall9p825e-03: [HNL_majorana_ntau0_ctau1p0e01_massHNL3p0_Vall9p825e-03,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL3p0_Vall9p825e-03, HNL_majorana_ntau2_ctau1p0e01_massHNL3p0_Vall9p825e-03]
+HNL_majorana_ntau_ctau1p0e01_massHNL4p5_Vall3p213e-03: [HNL_majorana_ntau0_ctau1p0e01_massHNL4p5_Vall3p213e-03,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL4p5_Vall3p213e-03, HNL_majorana_ntau2_ctau1p0e01_massHNL4p5_Vall3p213e-03]
+HNL_majorana_ntau_ctau1p0e01_massHNL6p0_Vall1p454e-03: [HNL_majorana_ntau0_ctau1p0e01_massHNL6p0_Vall1p454e-03,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL6p0_Vall1p454e-03, HNL_majorana_ntau2_ctau1p0e01_massHNL6p0_Vall1p454e-03]
+HNL_majorana_ntau_ctau1p0e01_massHNL8p0_Vall6p702e-04: [HNL_majorana_ntau0_ctau1p0e01_massHNL8p0_Vall6p702e-04,
+    HNL_majorana_ntau1_ctau1p0e01_massHNL8p0_Vall6p702e-04, HNL_majorana_ntau2_ctau1p0e01_massHNL8p0_Vall6p702e-04]
+HNL_majorana_ntau_ctau1p0e02_massHNL10p0_Vall1p177e-04: [HNL_majorana_ntau0_ctau1p0e02_massHNL10p0_Vall1p177e-04,
+    HNL_majorana_ntau1_ctau1p0e02_massHNL10p0_Vall1p177e-04, HNL_majorana_ntau2_ctau1p0e02_massHNL10p0_Vall1p177e-04]
+HNL_majorana_ntau_ctau1p0e02_massHNL1p0_Vall5p274e-02: [HNL_majorana_ntau0_ctau1p0e02_massHNL1p0_Vall5p274e-02,
+    HNL_majorana_ntau1_ctau1p0e02_massHNL1p0_Vall5p274e-02]
+HNL_majorana_ntau_ctau1p0e02_massHNL1p5_Vall1p886e-02: [HNL_majorana_ntau0_ctau1p0e02_massHNL1p5_Vall1p886e-02,
+    HNL_majorana_ntau1_ctau1p0e02_massHNL1p5_Vall1p886e-02]
+HNL_majorana_ntau_ctau1p0e02_massHNL2p0_Vall9p078e-03: [HNL_majorana_ntau0_ctau1p0e02_massHNL2p0_Vall9p078e-03,
+    HNL_majorana_ntau1_ctau1p0e02_massHNL2p0_Vall9p078e-03]
+HNL_majorana_ntau_ctau1p0e02_massHNL3p0_Vall3p107e-03: [HNL_majorana_ntau0_ctau1p0e02_massHNL3p0_Vall3p107e-03,
+    HNL_majorana_ntau1_ctau1p0e02_massHNL3p0_Vall3p107e-03, HNL_majorana_ntau2_ctau1p0e02_massHNL3p0_Vall3p107e-03]
+HNL_majorana_ntau_ctau1p0e02_massHNL4p5_Vall1p016e-03: [HNL_majorana_ntau0_ctau1p0e02_massHNL4p5_Vall1p016e-03,
+    HNL_majorana_ntau1_ctau1p0e02_massHNL4p5_Vall1p016e-03, HNL_majorana_ntau2_ctau1p0e02_massHNL4p5_Vall1p016e-03]
+HNL_majorana_ntau_ctau1p0e02_massHNL6p0_Vall4p597e-04: [HNL_majorana_ntau0_ctau1p0e02_massHNL6p0_Vall4p597e-04,
+    HNL_majorana_ntau1_ctau1p0e02_massHNL6p0_Vall4p597e-04, HNL_majorana_ntau2_ctau1p0e02_massHNL6p0_Vall4p597e-04]
+HNL_majorana_ntau_ctau1p0e02_massHNL8p0_Vall2p119e-04: [HNL_majorana_ntau0_ctau1p0e02_massHNL8p0_Vall2p119e-04,
+    HNL_majorana_ntau1_ctau1p0e02_massHNL8p0_Vall2p119e-04, HNL_majorana_ntau2_ctau1p0e02_massHNL8p0_Vall2p119e-04]
+HNL_majorana_ntau_ctau1p0e03_massHNL1p0_Vall1p668e-02: [HNL_majorana_ntau0_ctau1p0e03_massHNL1p0_Vall1p668e-02,
+    HNL_majorana_ntau1_ctau1p0e03_massHNL1p0_Vall1p668e-02]
+HNL_majorana_ntau_ctau1p0e03_massHNL1p5_Vall5p965e-03: [HNL_majorana_ntau0_ctau1p0e03_massHNL1p5_Vall5p965e-03,
+    HNL_majorana_ntau1_ctau1p0e03_massHNL1p5_Vall5p965e-03]
+HNL_majorana_ntau_ctau1p0e03_massHNL2p0_Vall2p871e-03: [HNL_majorana_ntau0_ctau1p0e03_massHNL2p0_Vall2p871e-03,
+    HNL_majorana_ntau1_ctau1p0e03_massHNL2p0_Vall2p871e-03]
+HNL_majorana_ntau_ctau1p0e03_massHNL3p0_Vall9p825e-04: [HNL_majorana_ntau0_ctau1p0e03_massHNL3p0_Vall9p825e-04,
+    HNL_majorana_ntau1_ctau1p0e03_massHNL3p0_Vall9p825e-04, HNL_majorana_ntau2_ctau1p0e03_massHNL3p0_Vall9p825e-04]
+HNL_majorana_ntau_ctau1p0e03_massHNL4p5_Vall3p213e-04: [HNL_majorana_ntau0_ctau1p0e03_massHNL4p5_Vall3p213e-04,
+    HNL_majorana_ntau1_ctau1p0e03_massHNL4p5_Vall3p213e-04, HNL_majorana_ntau2_ctau1p0e03_massHNL4p5_Vall3p213e-04]
+HNL_majorana_ntau_ctau1p0e03_massHNL6p0_Vall1p454e-04: [HNL_majorana_ntau0_ctau1p0e03_massHNL6p0_Vall1p454e-04,
+    HNL_majorana_ntau1_ctau1p0e03_massHNL6p0_Vall1p454e-04, HNL_majorana_ntau2_ctau1p0e03_massHNL6p0_Vall1p454e-04]
+HNL_majorana_ntau_ctau1p0e04_massHNL1p0_Vall5p274e-03: [HNL_majorana_ntau0_ctau1p0e04_massHNL1p0_Vall5p274e-03,
+    HNL_majorana_ntau1_ctau1p0e04_massHNL1p0_Vall5p274e-03]
+HNL_majorana_ntau_ctau1p0e04_massHNL1p5_Vall1p886e-03: [HNL_majorana_ntau0_ctau1p0e04_massHNL1p5_Vall1p886e-03,
+    HNL_majorana_ntau1_ctau1p0e04_massHNL1p5_Vall1p886e-03]
+HNL_majorana_ntau_ctau1p0e04_massHNL2p0_Vall9p078e-04: [HNL_majorana_ntau0_ctau1p0e04_massHNL2p0_Vall9p078e-04,
+    HNL_majorana_ntau1_ctau1p0e04_massHNL2p0_Vall9p078e-04]

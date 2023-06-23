@@ -8,6 +8,8 @@
 *.png
 hnlhisto.egg-info/
 plotting/plots
+limits/hists_*
+limits/log
 yields
 .vscode
 Miniconda*
